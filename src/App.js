@@ -17,6 +17,7 @@ function App() {
       <Hero
         title="Let's build something from anything together."
         image="./image/header.png"
+        targets={["Tsotra", "Marina", "Mahomby"]}
       />
     </>
   );
