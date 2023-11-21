@@ -1,5 +1,6 @@
 import Lenis from "@studio-freight/lenis";
 import "./reset.scss";
+import Hero from "./components/hero/Hero";
 
 function App() {
   const lenis = new Lenis();
@@ -11,7 +12,14 @@ function App() {
 
   requestAnimationFrame(raf);
 
-  return <div className="App">Hello world</div>;
+  return (
+    <>
+      <Hero
+        title="Let's build something from anything together."
+        image="./image/header.png"
+      />
+    </>
+  );
 }
 
 export default App;
