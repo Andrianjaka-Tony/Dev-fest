@@ -4,10 +4,19 @@
 
   .hero-title {
     font-size: 6rem;
-    font-family: HatschSans;
     font-weight: inherit;
     line-height: 1;
     margin-bottom: 4rem;
+
+    .sentence-wrapper {
+      column-gap: 1.5rem;
+
+      .word {
+        span {
+          font-family: HatschSans;
+        }
+      }
+    }
   }
 
   .hero-image {
