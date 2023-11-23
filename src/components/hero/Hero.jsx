@@ -64,28 +64,30 @@ export default function Hero({ title = "", targets = [], image = "" }) {
   }, [scrollYProgress]);
 
   return (
-    <div ref={heroRef} className="hero-section">
-      <motion.h1
-        variants={titleVariants}
-        custom={currentScroll}
-        initial="initial"
-        animate="animate"
-        className="hero-title"
-      >
-        <SentenceWrapper sentence={title} once={false} />
-      </motion.h1>
-      <HeroTargets targets={targets} once={false} />
-      <div className="image-container">
-        <motion.img
-          variants={imageVariants}
+    <>
+      <div ref={heroRef} className="hero-section">
+        <motion.h1
+          variants={titleVariants}
           custom={currentScroll}
           initial="initial"
           animate="animate"
-          src={image}
-          alt="hero illustration"
-          className="hero-image"
-        />
+          className="hero-title"
+        >
+          <SentenceWrapper sentence={title} once={false} />
+        </motion.h1>
+        <HeroTargets targets={targets} once={false} />
+        <div className="image-container">
+          <motion.img
+            variants={imageVariants}
+            custom={currentScroll}
+            initial="initial"
+            animate="animate"
+            src={image}
+            alt="hero illustration"
+            className="hero-image"
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

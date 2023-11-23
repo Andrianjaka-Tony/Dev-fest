@@ -1,0 +1,15 @@
+.scroller {
+  display: flex;
+  overflow: hidden;
+
+  .scroller-inner {
+    display: flex;
+    font-size: 100px;
+    text-transform: uppercase;
+    width: max-content;
+
+    span {
+      font-family: Designer;
+    }
+  }
+}
