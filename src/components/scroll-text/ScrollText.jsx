@@ -6,6 +6,7 @@ export const props = {
   items: [""],
   gap: 0,
   repeat: 0,
+  duration: 0,
 };
 
 /**
@@ -13,7 +14,12 @@ export const props = {
  * @param {props} param0
  * @returns
  */
-export default function ScrollText({ items = [], gap = 0, repeat = 4 }) {
+export default function ScrollText({
+  items = [],
+  gap = 0,
+  repeat = 4,
+  duration = 20,
+}) {
   const [width, setWidth] = useState(0);
 
   const ulRef = useRef();
@@ -43,7 +49,7 @@ export default function ScrollText({ items = [], gap = 0, repeat = 4 }) {
           transition: {
             repeat: Infinity,
             ease: "linear",
-            duration: 20,
+            duration,
           },
         }}
         className="tag-list scroller-inner"
