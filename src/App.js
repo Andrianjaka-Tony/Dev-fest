@@ -4,58 +4,35 @@ import Hero from "./components/hero/Hero";
 import ScrollText from "./components/scroll-text/ScrollText";
 import Footer from "./components/footer/Footer";
 import NavBar from "./components/nav-bar/NavBar";
-import { Route,Routes } from "react-router-dom";
-import {Login} from "./components/login/Login";
+import { Route, Routes } from "react-router-dom";
+import { Login } from "./components/login/Login";
 import Map from "./components/map/Map";
-
-function LandingPage() {
-  const lenis = new Lenis();
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
-  return <>
-    <div className="landing-page-container">
-    <NavBar/>
-    <Hero
-        title="Swift, precise, effortless travel!"
-        image="./image/header.png"
-        targets={["Velocity", "Precision", "Seamless"]}
-      />
-      <ScrollText
-        items={["Let's build something from anything together", "-"]}
-        repeat={4}
-        gap={30}
-        duration={30}
-      />
-      <Footer 
-        image=""
-      />
-    </div>
-  </>
-}
-function HomePage() {
-  return <>
-
-  </>
-}
+import { useEffect } from "react";
+import LandingPage from "./components/LandingPage/LandingPage";
+import Scroller from "./components/Scroller/Scroller";
 
 function App() {
-  
+  const lenis = new Lenis();
 
-  return <>
-    {/* <Routes>
-        <Route path="/" element={<HomePage />} />
-    </Routes> */}
+  const raf = (time) => {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  };
 
-    {/* <LandingPage/> */}
-    {/* <Login/> */}
-    <Map/>
-  </> 
-  
+  useEffect(() => {
+    requestAnimationFrame(raf);
+  }, []);
+
+  return (
+    <>
+      <Scroller lenis={lenis} />
+      <Routes>
+        <Route path="/" element={<LandingPage lenis={lenis} />} />
+        <Route path="/login" element={<Login lenis={lenis} />} />
+        <Route path="/map" element={<Map />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;

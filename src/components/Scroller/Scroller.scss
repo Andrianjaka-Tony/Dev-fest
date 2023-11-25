@@ -1,0 +1,23 @@
+.scroll_box
+{
+    transform: translateY(150%);
+    pointer-events: none;
+    z-index: 2;
+    transition: all 0.2s ease-in-out;
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    bottom: 2rem;
+    right: 1rem;
+    background-color: rgb(37, 40, 40);
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.show_scroll_box
+{
+    pointer-events: auto;
+    transform: translateY(0);
+}

@@ -23,6 +23,10 @@
 body {
   overflow-x: hidden;
 }
+html{
+  scroll-behavior: smooth;
+  transition: all 0.2s ease-in-out;
+}
 
 *::-webkit-scrollbar {
   display: none;
