@@ -1,0 +1,60 @@
+.signin-container,
+.login-container{
+    display: flex;
+    min-width: 350px;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20vh auto;
+    padding: 10px;
+    font-family: Poppins regular;
+    .logo-container{
+        border: 1px solid lightgray;
+        min-width: 80px;
+        min-height: 80px;
+        margin-bottom: 10px;
+    }
+    .login-item{
+        width: 90%;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        input{
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid lightgray;
+            background-color: transparent;
+            font-size: 13px;
+        }
+        .label-input{
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+    }
+    button{
+        width: 90%;
+        padding: 12px 20px;
+        outline:  #293140;
+        background-color: #293140;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        margin: 50px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 15px;
+    }
+    .sign-in-container{
+        display: flex;
+        margin-top: 20px;
+        .join-text{
+            margin-left: 5px;
+            text-decoration: underline;
+        }
+    }
+
+}
+.signin-container{
+   margin: 10vh auto;
+}

@@ -1,6 +1,10 @@
 :root {
   font-size: 16px;
 
+  --footer-main-color:#150c0f;
+  // --footer-title-color:#9080af;
+
+
   @media screen and (max-width: 768px) {
     font-size: 12px;
   }
@@ -12,7 +16,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins light;
+  // font-family: Poppins light;
+  font-family: inherit;
 }
 
 body {
@@ -103,4 +108,12 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+.landing-page-container::-webkit-scrollbar{
+  display: none;
+}
+.landing-page-container{
+  min-height: 100vh;
+  overflow-y: scroll;
 }
