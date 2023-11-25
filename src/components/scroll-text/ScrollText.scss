@@ -8,8 +8,10 @@
     text-transform: uppercase;
     width: max-content;
 
-    span {
-      font-family: Designer;
+    div {
+      display: flex;
+      width: max-content;
+      font-family: Open sans regular;
     }
   }
 }
